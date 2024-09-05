@@ -30,7 +30,6 @@
       </q-card>
     </div>
   </q-page>
-  <!-- sdsdvdsv -->
 </template>
 
 <style scoped>
