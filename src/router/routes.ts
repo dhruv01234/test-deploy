@@ -16,7 +16,6 @@ const routes: RouteRecordRaw[] = [
       { path: '/cyber', component: () => import('pages/CyberPage.vue') },
     ],
   },
-  // Always leave this as last one,
   // but you can also remove it
   {
     path: '/:catchAll(.*)*',
