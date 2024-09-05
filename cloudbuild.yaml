@@ -1,0 +1,27 @@
+steps:
+  # Step 1: Install dependencies
+  - name: 'node:18'
+    entrypoint: 'npm'
+    args: ['install']
+
+  # Step 2: Build the project
+  - name: 'node:18'
+    entrypoint: 'npm'
+    args: ['run', 'build']
+
+  # Step 3: Deploy to App Engine
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args: ['app', 'deploy', '--quiet']
+
+# Optional: Increase timeout if build takes longer
+timeout: '900s'
+
+# Specify environment variables if needed
+substitutions:
+  _NODE_VERSION: '18'
+
+artifacts:
+  objects:
+    location: 'gs://test-bicket-1234/build-output/'
+    paths: ['dist/**']
