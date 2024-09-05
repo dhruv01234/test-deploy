@@ -1,6 +1,8 @@
 <template>
   <q-page class="column items-center justify-evenly q-pa-md">
     <div class="text-center q-mb-lg">
+
+      <!-- sidhbcuibdcb -->
       <h1 class="responsive-title">Cybersecurity</h1>
       <q-img src="~assets/cybersecurity.avif" alt="Cybersecurity" class="responsive-img" fit="cover" style="width: 100%; height: 200px;"/>
       <p class="responsive-text">Protect your digital assets with our comprehensive cybersecurity solutions designed to safeguard your business from threats.</p>
