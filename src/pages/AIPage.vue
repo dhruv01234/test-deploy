@@ -1,6 +1,5 @@
 <template>
   <q-page class="column items-center justify-evenly q-pa-md">
-    <!-- adcdac -->
     <div class="text-center q-mb-lg">
       <h1 class="responsive-title">Artificial Intelligence</h1>
       <q-img src="~assets/ai.jpg" alt="Artificial Intelligence" class="responsive-img" fit="cover" style="width: 100%; height: 200px;"/>
