@@ -16,7 +16,7 @@ steps:
       - '-c'
       - |
         # SSH into the VM and deploy the app
-        gcloud compute ssh dhruv_modi_opus@instance-20240905-064327 --zone [ZONE] --command "
+        gcloud compute ssh dhruv_modi_opus@instance-20240905-064327 --zone asia-northeast1-b --command "
           sudo rm -rf /var/www/html/*;
           sudo cp -r dist/* /var/www/html/;
           sudo systemctl restart nginx
