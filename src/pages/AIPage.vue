@@ -3,7 +3,6 @@
 
     <div class="text-center q-mb-lg">
       <h1 class="responsive-title">Artificial Intelligence</h1>
-      <!-- <q-img src="~assets/ai_robot.png" alt="AI Robot" class="responsive-img" fit="cover" style="width: 100%; height: 200px;"/> -->
       <q-img src="~assets/ai.jpg" alt="Artificial Intelligence" class="responsive-img" fit="cover" style="width: 100%; height: 200px;"/>
       <p class="responsive-text">Leverage advanced AI technologies to automate processes and enhance decision-making.</p>
     </div>
