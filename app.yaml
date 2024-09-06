@@ -1,8 +1,23 @@
 runtime: nodejs18
 env: standard
+
 handlers:
+  - url: /js/(.*)
+    static_files: dist/spa/js/\1
+    upload: dist/spa/js/(.*)
+
+  - url: /css/(.*)
+    static_files: dist/spa/css/\1
+    upload: dist/spa/css/(.*)
+
+  - url: /img/(.*)
+    static_files: dist/spa/img/\1
+    upload: dist/spa/img/(.*)
+
+  - url: /fonts/(.*)
+    static_files: dist/spa/fonts/\1
+    upload: dist/spa/fonts/(.*)
+
   - url: /(.*)
     static_files: dist/spa/index.html
     upload: dist/spa/index.html
-  - url: /static
-    static_dir: dist/spa
