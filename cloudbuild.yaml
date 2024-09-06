@@ -1,5 +1,5 @@
 steps:
-  # Step 1: Install dependencies
+  Step 1: Install dependencies
   - name: 'node:18'
     entrypoint: 'npm'
     args: ['install']
@@ -9,21 +9,21 @@ steps:
     entrypoint: 'npm'
     args: ['run', 'build']
 
-  # Step 3: SSH into the Compute Engine VM and deploy the app
-  - name: 'gcr.io/cloud-builders/gcloud'
-    entrypoint: 'bash'
-    args:
-      - '-c'
-      - |
-        # SSH into the VM and deploy the app
-        gcloud compute ssh dhruv_modi_opus@instance-20240905-064327 --zone asia-northeast1-b --command "
-          sudo rm -rf /var/www/html/*;
-          sudo cp -r dist/spa/* /var/www/html/;
-          sudo systemctl restart nginx
-        "
 
-# Define the Compute Engine zone and instance information
-substitutions:
-  _ZONE: 'asia-northeast1-b'
-  _INSTANCE_NAME: 'instance-20240905-064327'
-  _USERNAME: 'dhruv_modi_opus'
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['app', 'deploy']
+    # entrypoint: 'bash'
+    # args:
+    #   - '-c'
+    #   - |
+    #     # SSH into the VM and deploy the app
+    #     gcloud compute ssh dhruv_modi_opus@test-deploy --zone asia-northeast1-b --command "
+    #       sudo apt update;
+    #       curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -;
+    #       sudo apt-get install -y nodejs;
+    #       cd test-deploy;
+    #       git pull origin master;
+    #       npm install;
+    #       npm run build;
+    #       gcloud app deploy;
+    #     "

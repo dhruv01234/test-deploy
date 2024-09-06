@@ -18,6 +18,14 @@ handlers:
     static_files: dist/spa/fonts/\1
     upload: dist/spa/fonts/(.*)
 
+  - url: /icons/(.*)
+    static_files: dist/spa/icons/\1
+    upload: dist/spa/icons/(.*)
+
+  - url: /(.*)
+    static_files: dist/spa/favicon.ico
+    upload: dist/spa/favicon.ico
+
   - url: /(.*)
     static_files: dist/spa/index.html
     upload: dist/spa/index.html

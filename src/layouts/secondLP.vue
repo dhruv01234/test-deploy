@@ -48,7 +48,7 @@
         </q-drawer>
       </div>
       <div class="header-options" v-if="$q.screen.gt.xs">
-        <!-- <span class="cursor-pointer animated" @click="navigateTo_scroll('','home')">Home</span> -->
+        <span class="cursor-pointer animated" @click="navigateTo_scroll('','home')">Home</span>
         <span class="cursor-pointer animated" @click="navigateTo_scroll('','about')">About Us</span>
         <span class="cursor-pointer animated" @click="navigateTo_scroll('','services')">Products</span>
         <span class="cursor-pointer animated" @click="navigateTo_scroll('','cta')">Contact</span>
