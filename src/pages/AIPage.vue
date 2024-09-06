@@ -1,7 +1,6 @@
 <template>
   <q-page class="column items-center justify-evenly q-pa-md">
     <div class="text-center q-mb-lg">
-      <!--  -->
       <h1 class="responsive-title">Artificial Intelligence</h1>
       <q-img src="~assets/ai.jpg" alt="Artificial Intelligence" class="responsive-img" fit="cover" style="width: 100%; height: 200px;"/>
       <p class="responsive-text">Leverage advanced AI technologies to automate processes and enhance decision-making.</p>
@@ -94,35 +93,35 @@ const generateVideo = async () => {
 //   }
 // };
 
-const pollVideoStatus = async (videoId) => {
-  const statusUrl = `https://www.veed.io/text-to-video-api/status/${videoId}`; // Construct the correct URL
-  try {
-    const statusResponse = await axios.get(statusUrl, {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-    console.log('Status Response:', statusResponse.data);
-    if (statusResponse.status === 200) {
-      const videoStatus = statusResponse.data.status;
-      if (videoStatus === 'completed') {
-        console.log('Video generation completed successfully.');
-        console.log('Video URL:', statusResponse.data.video_url);
-      } else if (videoStatus === 'processing') {
-        console.log('Video is still processing. Checking again in 10 seconds...');
-        setTimeout(() => pollVideoStatus(videoId), 10000);
-      } else {
-        console.error('Video generation failed.');
-        console.error('Status:', videoStatus);
-      }
-    } else {
-      console.error('Failed to get video status.');
-      console.error('Status Code:', statusResponse.status);
-    }
-  } catch (error) {
-    console.error('Error during status API call:', error);
-  }
-};
+// const pollVideoStatus = async (videoId) => {
+//   const statusUrl = `https://www.veed.io/text-to-video-api/status/${videoId}`; // Construct the correct URL
+//   try {
+//     const statusResponse = await axios.get(statusUrl, {
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//     });
+//     console.log('Status Response:', statusResponse.data);
+//     if (statusResponse.status === 200) {
+//       const videoStatus = statusResponse.data.status;
+//       if (videoStatus === 'completed') {
+//         console.log('Video generation completed successfully.');
+//         console.log('Video URL:', statusResponse.data.video_url);
+//       } else if (videoStatus === 'processing') {
+//         console.log('Video is still processing. Checking again in 10 seconds...');
+//         setTimeout(() => pollVideoStatus(videoId), 10000);
+//       } else {
+//         console.error('Video generation failed.');
+//         console.error('Status:', videoStatus);
+//       }
+//     } else {
+//       console.error('Failed to get video status.');
+//       console.error('Status Code:', statusResponse.status);
+//     }
+//   } catch (error) {
+//     console.error('Error during status API call:', error);
+//   }
+// };
 
 </script>
 
