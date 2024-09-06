@@ -26,6 +26,6 @@ handlers:
     static_files: dist/spa/index.html
     upload: dist/spa/index.html
 
-  - url: /(.*)
+  - url: /favicon.ico
     static_files: dist/spa/favicon.ico
     upload: dist/spa/favicon.ico
