@@ -23,9 +23,9 @@ handlers:
     upload: dist/spa/icons/(.*)
 
   - url: /(.*)
-    static_files: dist/spa/favicon.ico
-    upload: dist/spa/favicon.ico
-
-  - url: /(.*)
     static_files: dist/spa/index.html
     upload: dist/spa/index.html
+
+  - url: /(.*)
+    static_files: dist/spa/favicon.ico
+    upload: dist/spa/favicon.ico
